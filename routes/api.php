@@ -22,3 +22,6 @@ Route::get('startCatalogItem/{item}', 'Api\Parser\CatalogController@startCatalog
 Route::get('startProductParamParsing/{productType}', 'Api\Parser\CatalogController@startProductParamParsing');//->middleware('token'); # Начать парсинг Описаний для раздела
 // http://127.0.0.1:8000/api/startProductParamParsing/faucet
 
+Route::get('getProductDescriptions/{productType}/{part?}', 'Api\Parser\CatalogController@getProductDescriptions');//->middleware('token'); # Получить готовые описания для товаров
+// http://127.0.0.1:8000/api/getProductDescriptions/faucet
+
