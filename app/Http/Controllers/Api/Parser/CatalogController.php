@@ -23,8 +23,6 @@ class CatalogController extends Controller
     public function index()
     {
         return response()->json(Catalog::get(), 200);
-        // return 'Вывод всех товарных групп';
-        //https://artcrmvds.h1n.ru/api/getCatalogParts
     }
 
     /**
