@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
+Route::get('getCatalogParts', 'Api\Parser\CatalogController@index');//->middleware('token'); # Получить весь каталог
 Route::get('startCatalogParsing', 'Api\Parser\CatalogController@startCatalogParsing');//->middleware('token'); # Получить весь каталог
 Route::get('startCatalogItem/{item}', 'Api\Parser\CatalogController@startCatalogItem');//->middleware('token'); # Получить список товаров для раздела
 Route::get('startProductParamParsing/{productType}', 'Api\Parser\CatalogController@startProductParamParsing');//->middleware('token'); # Начать парсинг Описаний для раздела
